@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>长江三角洲 · 区域协同与辐射带动 | 地理课堂3D演示</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="app">
+  <div id="loader"><div class="loader-ring"></div><p>加载三维场景</p></div>
+  <canvas id="scene"></canvas>
+  <div id="labels"></div>
+
+  <!-- 顶栏 -->
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand-mark"></div>
+      <div>
+        <h1>长江三角洲 · 区域协同与辐射带动</h1>
+        <p>地理课堂 10 分钟试讲 · 3D 交互演示（教学示意）</p>
+      </div>
+    </div>
+    <nav class="mode-tabs" id="modeTabs">
+      <button class="tab active" data-mode="1"><span class="tab-num">壹</span>认识城市</button>
+      <button class="tab" data-mode="2"><span class="tab-num">贰</span>建立协同</button>
+      <button class="tab" data-mode="3"><span class="tab-num">叁</span>分析阻碍</button>
+    </nav>
+    <div class="topbar-actions">
+      <button id="btnRotate" class="ghost-btn" title="缓慢自动旋转，便于展示">◐ 自动旋转</button>
+      <button id="btnReset" class="primary-btn">↺ 重置演示</button>
+    </div>
+  </header>
+
+  <!-- 信息面板 -->
+  <aside class="panel" id="panel">
+    <button class="panel-close" id="panelClose">✕</button>
+    <div class="panel-body" id="panelBody"></div>
+  </aside>
+
+  <!-- 操作提示 -->
+  <div class="hint" id="hint">点击城市节点，查看城市画像（优势 · 短板 · 区位 · 产业）</div>
+
+  <!-- 图例与声明（可折叠） -->
+  <div class="legend" id="legend">
+    <div class="legend-toggle" id="legendToggle">
+      <span class="lg-title">图例 · 操作说明</span><span class="lg-arrow" id="legendArrow">▾</span>
+    </div>
+    <div class="legend-body" id="legendBody">
+      <div class="legend-row" id="legendRow"></div>
+      <p class="legend-note" id="legendNote"></p>
+    </div>
+  </div>
+</div>
+
+<script src="lib/three.min.js"></script>
+<script src="lib/OrbitControls.js"></script>
+<script src="lib/CopyShader.js"></script>
+<script src="lib/LuminosityHighPassShader.js"></script>
+<script src="lib/EffectComposer.js"></script>
+<script src="lib/RenderPass.js"></script>
+<script src="lib/ShaderPass.js"></script>
+<script src="lib/MaskPass.js"></script>
+<script src="lib/UnrealBloomPass.js"></script>
+<script src="js/geo.js"></script>
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
